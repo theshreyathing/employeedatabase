@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link ref = "stylesheet" href="style.css">
+    </head>
+    <body>
+        <title>
+            Employee database
+        </title>
+        <table class = "tab">
+            <tr>
+                <td>
+                    <form onsubmit = "event.preventDefault(); OnFormSubmit();" autocomplete="off">
+                        <div>
+                            <label>Full Name</label>
+                            <label class ="Validation-error hide" id ="FullName Validation error">(*This field is required)</label>
+                            <input type="text" name="FullName" id="FullName">
+                        </div>
+                        <div>
+                            <label>EMP Code</label>
+                            <input type="text" name="EMP CODE" id="EMP Code">                
+                        </div>
+                        <div>
+                            <label>Salary</label>
+                            <input type="text" name="Salary" id="Salary">
+                        </div>
+                        <div>
+                            <label>City</label>
+                            <input type="text" name="City" id="City">
+                        </div>
+                        <div>
+                            <div class="form-action-buttons">
+                                <input type="Submit" value = "submit"
+                        </div>
+                    </form>
+                </td>
+                <td>
+                    <table class = "list" id = "employeelist">
+                        <thread>
+                            <tr id="emp">
+                                <th>Full Name</th>
+                                <th>EMP code</th>
+                                <th>Salary</th>
+                                <th>City</th>
+                            </tr>
+                        </thread>
+                    </table>
+                </td>
+            </tr>    
+        </table>
+        <script src = "script.js"></script>
+
+    </body>
+</html>
