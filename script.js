@@ -1,7 +1,7 @@
 var selectedRow = null
 function OnFormSubmit () {
     if(validate()){
-        var formData = read formData();
+        var formData = readFormData();
         if(selectedRow == null)
         insertNewRecord(formData)
         else
@@ -20,13 +20,13 @@ function readFormData(){
 function insertNewRecord(data){
     var table = document.getElementById("EmployeeList").getElementsByTagName('tbody')[0];
     cell1 = newRow.insertcell(0);
-    cell1.innerHTML = data FullName;
+    cell1.innerHTML = data.FullName;
     cell2 = newRow.insertcell(1);
-    cell2.innerHTML = data EMP Code;
+    cell2.innerHTML = data.EMPCode;
     cell3 = newRow.insertcell(2);
-    cell3.innerHTML = data Salary;
+    cell3.innerHTML = data.Salary;
     cell4 = newRow.insertcell(3);
-    cell4.innerHTML = data city;
+    cell4.innerHTML = data.city;
     cell5 = newRow.insertcell(4)
     cell5.innerHTML = `<a onClick = "onEdit(this)">Edit</a>
     <a onClick = onDelete(this)">Delete</a>`;
