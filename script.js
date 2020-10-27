@@ -19,15 +19,15 @@ function readFormData(){
 }
 function insertNewRecord(data){
     var table = document.getElementById("emp");
-    cell1 = table.insertCell(0);
+    var cell1 = table.insertCell(0);
     cell1.innerHTML = data.FullName;
-    cell2 = table.insertCell(1);
+    var cell2 = table.insertCell(1);
     cell2.innerHTML = data.EMPCode;
-    cell3 = table.insertCell(2);
+    var cell3 = table.insertCell(2);
     cell3.innerHTML = data.Salary;
-    cell4 = table.insertCell(3);
+    var cell4 = table.insertCell(3);
     cell4.innerHTML = data.city;
-    cell5 = table.insertCell(4)
+    var cell5 = table.insertCell(4)
     cell5.innerHTML = `<a onClick = "onEdit(this)">Edit</a>
     <a onClick = onDelete(this)">Delete</a>`;
 }
@@ -62,7 +62,7 @@ function onDelete(td) {
 }
 function validate() {
     isValid = true;
-    if (document.getElementById("FullName Validation error").value == "") {
+    if (document.getElementById("FullName Validation error").value === "") {
         isValid = false;
         document.getElementById("FullName Validation error").classList.remove("hide");
     } else {
